@@ -1,0 +1,1010 @@
+Using javascript for project,
+
+
+
+
+
+1.Inline
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="alert('Yo Bro')">
+    
+</body>
+</html>
+
+
+
+
+ 
+
+
+
+2.Internal
+
+<script>
+....
+....
+....
+</script>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        alert("Hello");
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+3.External
+
+<script src="index.js"></script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="index.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+Math.E        // returns Euler's number
+Math.PI       // returns PI
+Math.SQRT2    // returns the square root of 2
+Math.SQRT1_2  // returns the square root of 1/2
+Math.LN2      // returns the natural logarithm of 2
+Math.LN10     // returns the natural logarithm of 10
+Math.LOG2E    // returns base 2 logarithm of E
+Math.LOG10E   // returns base 10 logarithm of E
+Math.pow(x,y)
+->  x^y
+Math.floor(3.3)
+->3
+
+
+
+
+
+
+
+Math.round,ciel,trunc,sign
+                       -1
+                        1 
+                        0
+
+
+
+
+
+
+variable can have aphabets,nums,_,$
+
+
+
+
+
+Input: var v = 1555; 
+       var s = String(v); 
+Output: now s contains "1555".
+
+Input: var v = 1555; 
+       var s = v.toString(); 
+Output: now s contains "1555".
+
+
+
+
+
+
+
+Input: var s = "144"; 
+       var n = Number(s); 
+Output: now n contain 144(Number).
+
+
+
+
+
+
+
+
+
+parseInt is for converting a non integer number to an int 
+and parseFloat is for converting a non float (with out a decimal) to a float (with a decimal).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+length of string:
+
+string_name.length
+
+
+Slicing a string:
+
+var name="yoyo"
+name.slice(0,2)
+->yo
+
+string_name.slice(x,y);
+x is the starting index
+y is the ending index,but yth index is not involved 
+
+
+
+string_name.toUpperCase()
+
+
+string_name.toLowerCase()
+
+.indexOf( )
+.charAt( )
+
+
+
+
+
+
+
+
+<html>
+ <head>
+ <title>JavaScript String lastIndexOf() Method</title>
+ </head>
+ <body>
+ <script type = "text/javascript"> 
+var str1 = new String( "This is string one and again string" ); 
+var index = str1.lastIndexOf( "string" ); 
+document.write("lastIndexOf found String :" + index ); document.write("<br />"); 
+var index = str1.lastIndexOf( "one" ); 
+document.write("lastIndexOf found String :" + index ); 
+</script> 
+</body> 
+</html>
+Output
+lastIndexOf found String :29 lastIndexOf found String :15 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+typeof  x  or	typeof(x)
+
+typeof "John"                 // Returns "string"
+typeof 3.14                   // Returns "number"
+typeof NaN                    // Returns "number"
+typeof false                  // Returns "boolean"
+typeof [1,2,3,4]              // Returns "object"
+
+
+
+
+
+
+
+
+
+
+
+var today = new Date( );
+
+toLocaleString
+getDate
+getMonth
+getDay
+getFullYear
+getTime
+getHours
+getMinutes
+getSeconds
+getMilliseconds
+
+// Returns the day of the month (from 1-31):
+var d = new Date();
+var n = d.getDate();  
+
+
+
+
+
+
+
+
+
+
+===
+!==
+<
+<=
+>
+>=
+
+
+===, 
+It checks value as well as the data type
+
+==,
+It only checks value
+
+&&
+||
+!
+
+
+
+
+
+
+
+
+if(something===somethingElse){
+
+}else{
+
+}
+
+
+
+
+
+
+
+The switch statement:
+
+switch (expression) 
+{
+	case value_1: 
+		// statement(s)
+		break;
+	case value_2:
+		// statement(s)
+		break;
+	…
+	default:
+		// statement(s)
+}
+
+
+
+
+
+
+
+
+Loops:
+
+
+While loop,
+
+while(if_its_true){
+   //do something
+}
+
+
+usual syntax:
+
+intializaton;
+while(if_its_true){
+   //do something
+   incrementation;
+}
+
+
+
+
+for loop,
+
+for(var i=0;i<n;i++){
+   do something;
+}
+
+
+
+
+
+for (identifier in object)
+     statement or compound statement
+
+
+
+
+
+
+
+
+
+
+document.write("Bro")
+document.writeln("yo yo");
+
+
+
+
+
+alert:
+
+The alert method opens a dialog window and displays its parameter in that window
+
+alert("Welcome to Hell");
+
+
+
+
+
+
+confirm:
+The confirm method opens a dialog window in which it displays its string parameter, along with 2 buttons, OK and Cancel.
+
+a = confirm("Are u sure?");
+if(a==true){
+    alert("Yup");
+}else{
+    alert("Nope");
+}
+
+
+
+
+
+prompt:
+The prompt method creates a dialog window that contains a text box
+
+                                   if user does't type anything
+var yourName = prompt("Yor name?","Mr Bond")
+
+
+
+var yourName = prompt("Yor name?","Mr Bond")
+alert(youName+"Welcome to Hell");
+
+
+
+
+
+
+
+
+
+
+
+
+
+Square root of quadratic equation:
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //ax2+bx+c
+        a=prompt("Enter a");
+        b=prompt("Enter b");
+        c=prompt("Enter c");
+
+        var root = Math.sqrt((b*b)-(4*a*c));
+        
+        var root1=(-1*b+root)/(2*a);
+        var root2=(-1*b-root)/(2*a);
+
+        alert("Root 1:"+root1)
+        alert("Root 2:"+root2);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+document.write("yo <br> <th> Heading 2 </th>");
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>yo bro</h1> "+"I'm Suhail <br>"
+                        ,"I AM PHENOMENAL");
+
+    </script>
+</body>
+</html>
+
+
+output:
+
+yo bro     //this was of h1 size
+I'm Suhail
+I AM PHENOMENAL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<table>",
+                    "<tr>",
+	            "<th>s </th>",
+                    "<th> Heading 1 </th>",
+                    "<th> Heading 2 </th>",
+                    "</tr>",
+                    "<tr>",
+                    "<th> Row1 </th>",
+                    "<td> r1, c1 </td>",
+                    "<td> r1, c2 </td>",
+                    "</tr>",
+                    "<th> Row2 </th>",
+                    "<td> r2, c1 </td>",
+                    "<td> r2, c2 </td>",
+                    "</tr>",
+                    "</table>");
+    </script>
+</body>
+</html>
+
+output:
+s	Heading 1   Heading 2
+Row1	r1, c1	    r1, c2
+Row2	r2, c1	    r2, c2
+
+
+
+
+
+
+
+
+
+
+
+function car(new_make, new_model, new_year)
+{
+  	this.make = new_make;
+ 	this.model = new_model;
+ 	this.year = new_year;
+}
+//This constructor could be used as in the following:
+my_car = new car (“Ford”, “Contour SVT”, “2000”);
+
+
+var prop1 = my_car.make;
+var prop2 = my_car [“make”]
+delete my_car.model;
+
+
+
+
+
+
+
+
+Array:
+
+var my_list = new Array (1, 2, “three”, “four”);
+var your_list = new Array (100);
+
+
+var array_name = [];
+
+var array_name = [item0 , item1 , ...... , itemn];
+
+accessing it,
+array_name[0]
+->item0
+
+
+For getting length,
+array_name.length
+
+
+
+To check if something is in an array,
+array_name.includes(item1)
+->it will give true/false
+
+
+
+adding elements,
+array_name.push(item);
+
+
+For poping,
+array_name.pop;
+
+
+
+
+
+Join:
+The join method converts all of the elements of an array to strings and concatenates them into a single string
+
+var names = new Array ( “Ajay”, “Ravi”, “Roopa”);
+var name_string = names.join (“ : ”);
+
+The values of name_string is now “Ajay : Ravi : Roopa”
+
+
+Reverse:
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.reverse();  // Mango,Apple,Orange,Banana
+
+
+
+
+Sort:
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort();  // Apple,Banana,Mango,Orange
+
+
+Concat:
+var names = new Array [“Ajay”, ”Ravi”];
+var new_names = names.concat (“Amar”, “Raj”);
+
+Now new_names consists of “Ajay”, ”Ravi”, “Amar”, “Raj”
+
+
+Slice:
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(1, 3);  // Orange,Lemon
+
+
+
+
+toString:
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.toString();   // Banana,Orange,Apple,Mango
+
+
+push pop:
+
+var list=[“Amar”, “Raj”, “Kiran”, “Kumar”];
+var name = list.pop(); //name is “Kumar”
+list.push (“Kumar”); //puts back “Kumar”
+
+
+
+shift and unshift:
+
+The shift and unshift methods remove and add an element to the beginning of an array, respectively
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.shift();  // Orange,Apple,Mango
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.unshift("Lemon", "Pineapple");  
+// Lemon,Pineapple,Banana,Orange,Apple,Mango
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Write a JavaScript program to compute the sum and product of an array of integers.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[1,2,3,4];
+
+        var sums=0;
+        var prods=1;
+        
+        for(var i=0;i<arr.length;i++){
+            sums+=arr[i];
+            prods*=arr[i];
+        }
+
+        document.write("Sum is: "+sums+"<br>");
+        document.write("Product is: "+prods);
+        
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+function:
+
+function functionName(args){
+
+}
+
+calling:
+functionName(args);
+
+ex:
+
+function showText(text){
+    alert(text);
+}
+
+showText("Hello");
+
+function functionName(args){
+   return something;
+}
+
+
+
+someVar = functionName(args);
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fun_1(a, b)
+	    {
+            document.write(" Function fun_1 was passed ", arguments.length, " 	parameters <br />");
+            document.write("Parameter Values are: <br />");
+            for(var arg=0; arg<arguments.length; arg++)
+            {
+                document.write(arguments[arg], "<br />");
+            }
+            document.write("<br />");
+	    }
+	    
+        fun_1("Hello");
+	fun_1("Hello", "Hi", 1997);
+     	fun_1(100, 200, "Hello", 23.6);
+
+
+    </script>
+</body>
+</html>
+
+
+Thee argument list is treated as a array
+
+so we ca do something like argumnets[0]
+arguments.length gives the length of it
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Program to get the position of first vowel in the string:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var str=prompt("Enter the string");
+        var ans = firstVowel(str);
+        if(ans==-1){
+            document.write("No vowel is present");
+        }else{
+            document.write("Vowel is present at location "+(ans+1));
+        }
+
+        function firstVowel(str){
+            for(var i=0;i<str.length;i++){
+                var curChar=str[i].toLowerCase();
+                if(curChar=="a" || curChar=="e"|| curChar=="i"|| curChar=="o" || curChar=="u"){
+                    return i;
+                }
+            }
+            return -1;
+        } 
+    </script>
+    
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+Pattern matching:
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var str="Rabbits are furry";
+         var pos = str.search (/Ra/);
+         alert(pos);
+
+    </script>
+</body>
+</html>
+
+output:
+0
+
+
+var str="Rabbits are furry";
+var pos = str.search (/bits/);
+output:
+3
+
+
+
+
+
+A period . matches any character except new line
+
+Example:
+/snow./ matches “snowy”, “snowe” etc
+
+
+
+
+so is we wanna use . as pattern then,
+/3\.4/ matches 3.4
+
+
+
+
+character class:
+[abc] matches either a or b or c
+  
+[a-h]  and [^aeiou]
+
+
+
+\d  -> A digit
+
+\D  -> not a digit
+
+\w  -> A word character
+\W  -> not a word character
+
+\s  -> A whitespace
+\S  -> not a whitespace
+
+
+/\d\.\d\d/ Matches a digit, followed by a period, followed by 2 digits
+
+/\D\d\D/ Matches a single digit
+
+/\w\w\w/ Matches three adjacent word characters
+
+
+
+To repeat a pattern, a numeric, quantifier, delimited by braces, is attached
+Example:
+/xy{4}z/ matches xyyyyz
+
+
+* Means zero or more repetitions
++ Means one or more repetitions
+? Means one or none
+
+
+
+
+
+
+
+
+
+
+Anchor:
+start
+/^perl/
+
+
+
+$:
+end
+/perl$/
+
+
+
+
+
+/Apple/i matches ‘APPLE’, ‘apple’, ‘Apple’, etc
+
+The x modifier allows whitespace to appear in the pattern
+
+
+
+
+Replace:
+
+var str = “Fred, Freddie and Frederica were siblings”;
+str.replace (/Fre/g, “Boy”);    //g->find all matches
+In this example, str is set to “Boyd, Boyddie and Boyderica were siblings”
+
+
+
+
+
+
+
+
+
+
+Split:
+The split method splits its object string into substrings, based on a given string or pattern
+
+Example:
+var str = “grapes:apples:oranges”
+var fruit = str.split(“:”);
+In this example, fruit is set to [grapes, apples, oranges]
+
+
+

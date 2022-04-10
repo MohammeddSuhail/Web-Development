@@ -1,0 +1,1033 @@
+new tags in html:
+<header>
+<footer>
+<nav>
+<section>  
+<article>
+
+<canvas> element for 2D drawing
+
+
+
+HTML can display Block elements and Inline elements
+
+Block elements:takes entire width of screen
+so it can't have ele's next to it since one ele will take entire width of screen 
+eg:
+<p>paragraph1</p>
+<p>paragraph2</p>
+paragraph1 and paragraph2 will be in different line  
+
+
+Inline elements:doesnot takes entire width of screen, takes only space required
+so it can have ele's next to it since one ele will not take entire width of screen 
+eg:
+<a href="#">link1</a>
+<a href="#">link2</a>
+link1 and link2 will be side by side
+
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+     Hello World
+   </body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+     <h1>Hello World</h1>
+     <h2>Hello World</h2>
+   </body>
+</html>
+
+h in h1 stands for heading
+There are h1,h2,...,h6 
+size of h1> h6
+
+
+<p></p> for paragrah text
+Eg:
+<p>I am</p>
+<p>Suhail</p>  
+
+commenting: <!--  comment  -->
+or
+
+<!--  
+comment
+comment
+-->
+
+
+Head is used to define info about file and to do configuration
+
+
+Two part of a html doc: Head and Body
+
+Container tag
+
+<html>
+</html>
+
+Head tag:
+Title, import resources,etc
+<head>
+</head>
+
+
+Body tag:
+Actual body of the page
+Content will be inside it
+<body>
+</body>
+
+
+Other tags:
+
+<title>Some Title</Title>
+This must be inside head
+That title is shown as the tab name
+
+
+
+Meta tags:
+Defines info about our file
+These are data of data 
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- Descrition of our website -->
+    <meta name="description" content="Your description">
+    <!-- Author -->
+    <meta name="author" content="Suhail">
+    <!-- keywords which will be used by browser -->
+    <meta name="keywords" content="Pokemon,DRagon,cat">
+    <!-- This line is required so that our website will appear proper in mobile devices also -->
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <title>SuhailZ</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    
+  </body>
+</html>
+
+
+
+
+
+
+Bold:
+<strong></strong>
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>I Am <strong>Suhail</strong></h2>
+  </body>
+</html>
+
+
+
+
+Italic:
+<em></em>
+
+
+Line break(1 line gap)
+<br>
+<br><br>(2 line gap)
+
+
+Horizontal rule:
+Horizontal Line
+<hr>
+
+
+
+<big></big>
+
+<small></small>
+
+
+
+Subscript:
+<sub></sub>
+
+Supersript:
+<sup></sup>
+
+
+Formatting a page:
+
+Every website body has 3 part:
+header
+main
+footer
+
+header,main,footer,section,article won't change the look of our page
+It is just for oganizing puprpose and it will help the browser to understand where what is
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+  </head>
+  <body>
+    <header>
+
+    </header>
+
+    <main>
+
+    </main>
+
+    <footer>
+
+    </footer>
+    
+  </body>
+</html>
+
+
+
+
+
+
+
+Navigation:Has links to other websites 
+<nav></nav>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <nav></nav>
+    </header>
+
+    <main>
+
+    </main>
+
+    <footer>
+
+    </footer>
+
+  </body>
+</html>
+
+
+
+
+Article:
+<article>
+</article>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <nav></nav>
+    </header>
+
+    <main>
+      <article>
+
+      </article>
+    </main>
+
+    <footer>
+
+    </footer>
+
+  </body>
+</html>
+
+
+
+Section:
+<section>
+</section>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <nav></nav>
+    </header>
+
+    <main>
+      <article>
+        <section>
+
+        </section>
+
+        <section>
+
+        </section>
+      </article>
+    </main>
+
+    <footer>
+
+    </footer>
+
+  </body>
+</html>
+
+
+
+
+
+
+
+
+<aside>
+
+</aside>
+is used for content not directly realted to the core content of website like add
+
+
+
+
+
+
+
+
+
+
+Link:
+               URL                 Text that is shown,when we press it, it will redirect to that URL
+<a href="http://www.google.com">Google Homepage</a>
+or
+<a href="http://www.google.com"><h2>Google Homepage</h2></a>
+
+To open the link in new tab,
+<a href="http://www.google.com" target="_blank">Google Homepage</a>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Suhail</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <a href="http://www.google.com" target="_blank"><h2>Google Homepage</h2></a>
+  </body>
+</html>
+
+
+
+To link to other html,
+
+<a href="page2.html"><h2>Page2</h2></a>
+
+If page3.html is inside dir folder(directory)
+<a href="dir/page3.html"><h2>Page3</h2></a>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Suhail</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>Home</h1>
+    <a href="page2.html"><h2>Page2</h2></a>
+    <a href="dir/page3.html"><h2>Page3</h2></a>
+  </body>
+</html>
+
+
+
+To link to files on your website,
+           
+<a href="cat.jfif" target="_blank"><h2>Cat Picture</h2></a>
+          or
+         dsd.pdf
+           or
+         pk.mp3
+           or 
+          etc
+
+
+
+
+
+
+
+
+Images:
+
+<img src="Link to he picture" alt="If the source is not found this message will be displayed" />
+
+<img width="some pixel" height="some pixel" src="Link to he picture" alt="If the source is not found this messagewill be displayed" />
+
+While giving width and height check its aspect ratio and give because we don't our pic to look weird
+Eg:If a pic has aspect ratio of 200x100(widthxheight), u acn give something like 100x50 
+               
+                                                    Dinosaur picture link                                                                                                                                  msg if not found
+<img width="100" height="100" src="https://discovery.sndimg.com/content/dam/images/discovery/editorial/Curiosity/2020/3/Color_Dinosaurs_Getty_Images.jpg.rend.hgtvcom.616.616.suffix/1583454329186.jpeg" alt="Scary Dino" /> 
+In above pic it's height and width wre same so
+
+If picture is in your computer,
+<img width="100" height="66" src="cat.jpeg" alt="Cute Cat"/>
+In above pic it was a rectangle shaped pic so diff width and height based on aspect ratio
+
+You need not set both width and height,
+If u specify width or height is enough, the html will set other one automatically
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Suhail</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>Dinosaur</h1>
+    <img width="100" height="100" src="https://discovery.sndimg.com/content/dam/images/discovery/editorial/Curiosity/2020/3/Color_Dinosaurs_Getty_Images.jpg.rend.hgtvcom.616.616.suffix/1583454329186.jpeg" alt="Scary Dino" />
+
+    <img height="150" src="cat.jfif" alt="Cute Cat"/>
+  </body>
+</html>
+
+
+
+
+
+
+To combine image with a link:
+
+<a href="link of some page" target="_blank">
+<img height="150" src="cat.jfif" alt="Cute Cat"/>
+</a>
+When the image is clicked it will to go that line specified
+
+
+
+
+    
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Suhail</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <a href="https://www.google.com" target="_blank">
+    <img height="150" src="cat.jfif" alt="Cute Cat"/>
+    </a>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+Videos and YouTube iFrames:
+
+
+To play vedios which are in your computer,
+
+                                     thumbnail               size    
+<video src="PokemonOpener.mp4" poster="poke.png" controls width="300"></video>
+
+if u want loop:
+<video src="PokemonOpener.mp4" poster="poke.png" loop controls width="300"></video>
+
+if u want autoplay:
+<video src="PokemonOpener.mp4" poster="poke.png" autoplay controls width="300"></video>
+
+
+<video src="PokemonOpener.mp4" poster="poke.png" loop controls width="300"></video>
+or
+<video src="PokemonOpener.mp4" poster="poke.png" loop controls width="300">here u can put msg if something goes wrong</video>
+
+
+
+There are ore attributes u can check it in google
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Suhail</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>Pokemon</h1>
+    <video src="PokemonOpener.mp4" poster="poke.png" autoplay controls width="300"></video>
+  </body>
+</html>
+
+
+
+
+
+
+
+To play Youtube videos:
+
+Go to that video in youtube 
+Press share
+Then press embed option
+You will get something like this
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rg6CiPI6h2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+copy an paste to html
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Suhail</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>Pokemon</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rg6CiPI6h2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+Lists:
+
+
+Unordered list:
+<ul>
+   <li>Pikachu</li>
+   <li> <a href="http://google.com"> Charmader </a></li>
+   <li>Bulbasaur</li>
+   <li>Squirtel</li>
+</ul>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <ul>
+      <li>Pikachu</li>
+      <li> <a href="http://google.com"> Charmader </a></li>
+      <li>Bulbasaur</li>
+      <li>Squirtel</li>
+    </ul>
+  </body>
+</html>
+
+
+
+
+Ordered List:
+It will just give numbers or alphabets to it
+By default it's number
+
+<ol>
+   <li>Pikachu</li>
+   <li> <a href="http://google.com"> Charmader </a></li>
+   <li>Bulbasaur</li>
+   <li>Squirtel</li>
+</ol>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SuhailZ</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <ol>
+      <li>Pikachu</li>
+      <li> <a href="http://google.com"> Charmader </a></li>
+      <li>Bulbasaur</li>
+      <li>Squirtel</li>
+    </ol>
+  </body>
+</html>
+
+
+It will give A,B,C,D
+<ol type="A">
+   <li>Pikachu</li>
+   <li> <a href="http://google.com"> Charmader </a></li>
+   <li>Bulbasaur</li>
+   <li>Squirtel</li>
+</ol>
+
+
+It will give a,b,c,d
+<ol type="a">
+   <li>Pikachu</li>
+   <li> <a href="http://google.com"> Charmader </a></li>
+   <li>Bulbasaur</li>
+   <li>Squirtel</li>
+</ol>
+
+
+It will give uppercase roman numbers
+<ol type="I">
+   <li>Pikachu</li>
+   <li> <a href="http://google.com"> Charmader </a></li>
+   <li>Bulbasaur</li>
+   <li>Squirtel</li>
+</ol>
+
+
+It will give lowercase roman numbers
+<ol type="i">
+   <li>Pikachu</li>
+   <li> <a href="http://google.com"> Charmader </a></li>
+   <li>Bulbasaur</li>
+   <li>Squirtel</li>
+</ol>
+
+
+
+
+You can have list inside a list:
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SuhailZ</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <ol>
+      <li>Pikachu</li>
+      <li> <a href="http://google.com"> Charmader </a></li>
+      <li>Bulbasaur
+        <ol type="a">
+          <li>Grass Type</li>
+          <li>Green Color</li>
+        </ol>  
+      </li>
+      <li>Squirtel</li>
+    </ol>
+  </body>
+</html>
+
+
+
+
+
+
+Description list:
+
+
+description term:<dt></dt>
+
+description for dt: <dd></dd>
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SuhailZ</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <dl>
+      <dt>Pikachu</dt>
+      <dd>Electric</dd>
+      <dt>Bulbasaur</dt>
+      <dd>Grass Type Pokemon</dd>
+      <dt>Squirtel</dt>
+    </dl>
+  </body>
+</html>
+
+
+
+
+
+
+
+Tables:
+
+tr:table row
+th:table header
+td:table data
+u don't compulsarily need table header's
+
+thead and tbody doesn't change the look of the page, it is just for organizing purpose
+
+Column span(colspan):Tells how many columns data shoul take
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SuhailZ</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <table>
+      <thead>
+        <caption><h2>List of Numbers</h2></caption>
+        <tr>
+          <th>First</th>
+          <th>Second</th>
+          <th>Third</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="2">One</td>
+          <td>Two</td>
+          <td>Three</td>
+          <td>Three and half</td>
+        </tr>
+        <tr>
+          <td>Four</td>
+          <td>Five</td>
+          <td>Six</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
+
+
+
+Output:
+       List of Numbers
+First	Second	Third
+One	        Two	Three	Three and half
+Four	Five	Six
+
+one takes two columns spaces because we specified colspan="2" for it
+
+
+
+
+
+
+
+
+
+
+Divs and Spans:
+These are containers
+It comes handy when we use CSS
+
+spans are an inline container
+
+Divs are block containers
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SuhailZ</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <span>spa1</span>
+    <span>spa1</span>
+    <hr>
+    <div>div1</div>
+    <div>div1</div>
+  </body>
+</html>
+
+Output:
+
+spa1 spa1
+-------------------------------------------------------------------------------------------------------------------------------------
+div1
+div1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input and Forms:
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SuhailZ</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <input type="text" value="Enter User Name"/>
+    <input type="button" />
+    <input type="checkbox"/>
+    <input type="color"/>
+    <input type="password"/>
+    <input type="date" />
+    <input type="email" />
+    <input type="range" />
+    <input type="file" />
+    <input type="radio" name="btn"/>
+    <input type="radio" name="btn" />
+    <input type="submit" />
+  </body>
+</html>
+
+value is a default value
+if radiobutton has same name then only one can be checked
+
+input has many attributes,check below website for knowing all
+https://www.w3schools.com/tags/att_input_type.asp
+
+
+<input type="button" value="Click me" onclick="msg()">
+
+
+
+Dropdown menu:
+
+<label for="Degree">Degree: </label>
+<select name="Degree">
+    <option value="select">-- Select Group --</option>
+    <option value="BCOM">BCOM</option>
+    <option value="BCA">BCA</option>
+    <option value="BE">BE</option>
+    <option value="BTech">BTech</option>
+</select> <br>
+
+
+or
+
+
+<label>Degree: </label>
+<select>
+    <option>BCOM</option>
+    <option>BCA</option>
+    <option>BE</option>
+    <option>BTech</option>
+</select> 
+
+
+
+
+
+Textarea:
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SuhailZ</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <textarea>
+    </textarea>
+  </body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SuhailZ</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <textarea rows="10" cols="30">
+      Default texts or paragraphs 
+    </textarea>
+  </body>
+</html>
+
+
+
+
+
+
+form:
+<form>
+
+</form>
+All the inputs are wrapped inside it
+
+
+
+
+
+
+
+
+
+iFrame:
+It can display another website inside your webpage
+                                                          
+<iframe src="https://en.wikipedia.org/wiki/Pok%C3%A9mon">Sorry</iframe>
+
+if we want o specify width and height:
+<iframe src="https://en.wikipedia.org/wiki/Pok%C3%A9mon" width="1000" height="800">Sorry</iframe>
+
+
+<iframe src="https://giraffeacademy.com/" frameborder="0" width="1000" height="800">Sorry</iframe>
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SuhailZ</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <iframe src="https://en.wikipedia.org/wiki/Pok%C3%A9mon" width="1000" height="800">Sorry</iframe>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+For certering the text:
+<center>
+.......
+.......
+.......
+.......
+</center>
+
+
+
+
+
+
+
+
+Form:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--action says what to do when submit is pressed and post transfers what ever user inputted to that mail-->
+    <form action="mailto:moh3suhail@gmail.com" method="post" enctype="text/plain">
+        <label>Your Name</label>
+        <input type="text" name="youName" placeholder=""><br>
+        <label>Pick a color</label>
+        <input type="color" name="color" placeholder=""><br>
+        <label>Are you a programmer</label>
+        <input type="checkbox" name="isProgramming" placeholder=""><br>
+        <label>Enter your email</label>
+        <input type="email" name="myEmail" placeholder=""><br>
+        <label>password</label>
+        <input type="password" name="myPassword" placeholder=""><br>
+        <label>date</label>
+        <input type="date" name="date" placeholder=""><br>
+        <label>Choose a file</label>
+        <input type="file" name="file" placeholder=""><br>
+        <label>Enter the range:</label><br>
+        <input type="range"><br>
+        <label>Enter the Message</label><br>
+        <textarea name="" id="" cols="30" rows="10"></textarea><br>
+        <br>
+        <input type="submit">
+    </form>
+</body>
+</html>
+
+They aremany other input types
+
+
+
+
+
+
+
+
+
+<textarea name="" id="" cols="30" rows="10"></textarea><br>
+is for creating a box where users can type large texts
+

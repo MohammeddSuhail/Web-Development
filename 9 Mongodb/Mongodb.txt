@@ -1,0 +1,60 @@
+https://www.codewithharry.com/blogpost/mongodb-cheatsheet
+
+
+
+
+https://docs.mongodb.com/manual/crud/
+
+
+
+
+
+$ npm install mongoose
+
+hyper or power shell,
+
+1. 
+
+mongo
+
+
+2.
+
+check commands from the above links
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+How to use it in our app which uses node js,
+
+Two ways,
+
+1.
+using driver
+
+
+
+2.
+mongoose
+
+
+
+
+
+
+
+
+
+
+
+

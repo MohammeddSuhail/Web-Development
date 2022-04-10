@@ -1,0 +1,579 @@
+
+color:
+<p style="color:pink;">i am</p>
+<p style="color:blue;">i am</p>
+
+  <body style="color:blue;">  //for whole body
+    <p>i am</p>
+  </body>
+
+
+
+Background color:
+This is inline css
+<p style="color:blue; background-color:pink;">i am</p>
+
+<p style="background-color:pink;">i am</p>
+
+<p style="color: #80ff00;">i am</p>
+
+
+
+
+
+
+
+internal css:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: cadetblue;
+        }
+        hr{
+            background-color:transparent;
+            border-style: dotted;
+            width: 10%;
+        }
+
+    </style>
+</head>
+<body>
+    <br>
+    <table>
+        <tr>
+            <td><img src="2Photo.png" alt="My photo" width="200"></td>
+            <td><h2>Name: Suhail<br>Age: 20<br>Clg: NMAMIT<br>Year: 3rd </h2></tr>
+        </tr>
+    </table>
+    <br>
+    <hr>
+    <h2>Slills</h2>
+    <ul>
+        <large>
+        <li>C</li>
+        <li>C++</li>
+        <li>Python</li>
+        <li>Java</li>
+        <li>Android Development Using Java</li>
+        <li>Web Development Beginner</li>
+        </large>
+    </ul>
+    <hr>
+    <h2>Hobbies</h2>
+    <ul>
+        <large>
+        <li>Anime</li>
+        <li>Shows</li>
+        <li>Vedio Games</li>
+        <li>Volleyball</li>
+        </large>
+    </ul>
+    <hr>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<style>
+     hr{
+          background-color:transparent;
+          border-style: dotted none none none;
+          border-color: white;
+          border-width: 15px;
+          width: 10%;
+     }
+</style>
+
+diff style:
+
+hr{
+            background-color:transparent;
+            border-style: none;
+            border-top: dotted ;
+            border-color: white;
+            border-width: 15px;
+            width: 10%;
+        }
+
+
+diff style:
+hr{
+            background-color:transparent;
+            border-style: none;
+            border-top: dotted ;
+            border-color: gray;
+            border-width: 10px;
+            width: 5%;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+External css:
+
+
+put these styles inside new folder css->new file styles.css
+
+Then put the below line in the head of the html document
+
+<link rel="stylesheet" href="css/styles.css">
+
+
+Tag selectors:
+looks same as we use in internal css
+
+tagName{
+....
+....
+....
+}
+
+
+
+
+
+Class Selectors:
+
+Class names can be same, so that we can styles many elements
+
+If u want to give diiferent style for similar tags use class selectors like
+
+
+<img class="class_name" src="" ....
+
+
+<img class="apple" src="" ....
+
+
+and in styles.css
+
+.class_name{
+....  
+....
+....
+}
+
+.apple{
+....  
+....
+....
+}
+
+an html ele can have multiple class
+
+
+<img class="apple circular" src="" ....
+
+
+
+
+Id selectors:
+
+***id's are unique, so we will be styling only one ele
+ 
+we can give id's to tags then we use that id to style it using css
+
+
+#thatid{
+....
+....
+....
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pseudo class: 
+
+link for more info :  https://www.w3schools.com/css/css_pseudo_classes.asp
+
+what to do in different states
+
+eg:hover
+
+img:hover{
+background-color:"red";
+}
+
+li:hover{
+    background-color:aliceblue;
+}
+
+Check other pseudo class also
+
+
+
+
+
+
+
+
+
+
+
+
+Favicon or Favourite icon:
+This will be displayed near your title in tab name
+
+For creating one website:  https://www.favicon.cc/
+
+
+In html head:
+
+<link rel="icon" href="favicon.ico">
+
+
+
+
+
+
+
+
+
+
+<span>sonething</span>
+
+
+
+
+
+
+display:
+attribue, display:inline;
+                    or
+                  block;
+                    or
+                inine-block;
+                    or
+                   none;  
+
+
+
+
+
+
+
+
+
+
+position:
+
+attribute,position:
+by default it's static
+
+relative,
+positining relative to where the ele should have been
+
+position:relative;
+left:30px;
+Other one's right,top,bottom
+In relative, only that ele will move,other ele's won't be effected
+
+
+absolute,
+positining relative to it's parent
+here other ele's are effected too
+position:absolute;
+left:0;     //this will put that ele left of it's parent
+left:30px   //this will put that ele left of it's (parent+30px)
+
+
+
+fixed,
+position:fixed;
+top:
+left
+right:
+bottom:
+Here the ele will remain thae same position even when u scroll
+positining relative to it's parent
+
+
+
+
+
+
+
+
+
+text-align:center
+
+
+
+margin:0 auto 0 auto; or margin:0 auto; //centering horizontally
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if u wanna fetch the font format if not available:
+
+https://fonts.google.com/
+
+Put this in head of html doc:
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@100&family=Sacramento&display=swap" rel="stylesheet">
+
+in css:
+font-family: 'Sacramento', cursive;
+
+u get these lines from above site
+
+
+
+
+for gifs:
+https://giphy.com/
+
+
+
+
+100% = 16pxp = 1em
+so 90px is 562.5% o2 5.625em
+
+562.5% o2 5.625em will be added by the size of it's root
+
+so if u don't wanna add them , then use rem instead of em
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+font-weight: normal;
+
+
+
+
+line-height:2;
+space between the texts
+
+
+
+
+
+
+
+
+
+
+
+
+float:left;
+
+float left side of the parent
+
+other stuff will wrap around it
+
+
+
+
+clear:left
+       or
+     right
+      or .....
+
+it clears whatever on roght if it
+which means we can use it when we don't want it to float around something
+
+
+
+
+
+
+
+
+
+
+
+
+
+BUTTON:
+
+https://cssbuttoncreator.com/
+
+
+
+
+
+transform: rotate(25deg);
+
+for opposite direction use -
+like transform: rotate(-25deg);
+
+
+
+
+media queries:
+
+@media print{
+
+}
+
+
+@media screen{
+
+}
+
+@media speech{
+
+}
+
+
+@media (min-width: 900px){
+
+}
+
+@media (max-width: 900px){
+
+}
+
+
+@media (min-width: 900px) and (max-width: 1000px){
+
+}
+
+Ex:
+
+#title{
+    background-color: #ff4c68;
+    color: #fff;
+}
+
+.title-img{
+    width: 20rem;
+    transform: rotate(25deg);
+    position: absolute;
+    right:20%;
+}
+
+@media (max-width:1024px) {
+    .title-img{
+        position: static;
+        transform: rotate(0);
+    }
+
+    #title{
+        text-align: center;
+    }
+    
+}
+
+
+
+
+
+
+
+h1,h2,h3{
+
+}
+
+
+#someId .someClassName{
+
+
+}
+
+
+
+div h1{
+
+}
+for all the h1 n div
+
+
+div .someClassName{
+
+}
+
+
+read from right->left
+
+
+
+
+
+
+h1#title{
+
+}
+h1 with id title
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+for centring any div or view,
+
+margin: something auto something auto;
+
+
+
+
+
+
+
+
+
+

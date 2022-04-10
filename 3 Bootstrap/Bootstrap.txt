@@ -1,0 +1,254 @@
+https://getbootstrap.com/docs/5.1/getting-started/introduction/
+
+
+
+you should add link of it in the head of the html
+
+
+
+
+Navbar:
+
+https://getbootstrap.com/docs/4.1/components/navbar/
+
+
+u need to add JS link for working of drop down menu inside navbar
+
+
+
+
+
+
+
+Layout->Grid
+
+https://getbootstrap.com/docs/5.1/layout/grid/
+
+
+  <div class="row">
+    <div class="col-5">
+      Column
+    </div>
+    <div class="col-4">
+      Column
+    </div>
+    <div class="col-3">
+      Column
+    </div>
+  </div>
+The above is not responsive
+
+totol no of col is 12 columns in a row
+
+
+  <div class="row">
+    <div class="col-md-5">
+      Column
+    </div>
+    <div class="col-md-4">
+      Column
+    </div>
+    <div class="col-md-3">
+      Column
+    </div>
+  </div>
+The above is responsive
+
+any device with less than md(medium) size it will go to next line
+
+
+
+
+
+  <div class="row">
+    <div class="col-lg-3 col-md-4">   
+      Column
+    </div>
+    <div class="col-lg-3 col-md-4">
+      Column
+    </div>
+    <div class="col-lg-3 col-md-4">
+      Column
+    </div>
+    <div class="col-lg-3 col-md-4">
+      Column
+    </div>
+  </div>
+
+lg and above,
+Column Column Column Column
+
+md and above,
+Column Column Column
+Column
+
+less than md i.e small,
+Column
+Column
+Column
+Column
+
+
+
+
+
+
+
+
+  <div class="row">
+    <div class="col-lg-3 col-md-4 col-sm-6">   
+      Column
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6">  
+      Column
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6">  
+      Column
+    </div>
+    <div class="col-lg-3 col-md-4 col-sm-6">  
+      Column
+    </div>
+  </div>
+
+lg and above,
+Column Column Column Column
+
+md and above,
+Column Column Column
+Column
+
+less than md i.e small,
+Column Column
+Column Column
+
+
+
+
+
+
+
+
+
+
+Container:
+
+
+<div class="container">
+  sdjcnsjcnsldjkncsd
+</div>
+
+output, it will have some padding on left and right 
+
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container-fluid">
+  sdjcnsjcnsldjkncsd
+</div>
+
+It will occupy all the screen width
+
+
+
+
+
+Buttons:
+
+https://getbootstrap.com/docs/5.1/components/buttons/
+
+
+
+
+
+
+
+
+
+
+
+
+
+icons:
+
+check,
+https://fontawesome.com/kits/7a7e13cf9f/use?welcome=yes
+
+first u have to add a line in head 
+then u can use it
+
+
+
+
+
+
+
+
+Carousel:
+Kind of like slideshow
+
+https://getbootstrap.com/docs/5.1/components/carousel/
+
+
+
+
+
+
+Cards:
+
+https://getbootstrap.com/docs/5.1/components/card/
+
+
+ex:
+
+<div class="card">
+   <div class="card-header">
+      <h3>Chihuahua</h3>
+   </div>
+   <div class="card-body">
+      <h2>Free</h2>
+      <p>5 Matches Per Day</p>
+      <button style="width: 100%" type="button" class="btn btn-outline-dark btn-lg"> Sign-Up </button>
+   </div>
+</div>
+It can have footer also
+
+
+
+
+
+
+
+
+
+
+
+
+z-axis:
+In order to use this u have add position also
+like position:absolute;
+                or
+              relative
+                 or
+               fixed
+   
+       
+
+
+
+
+

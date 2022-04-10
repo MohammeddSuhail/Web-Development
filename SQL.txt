@@ -1,0 +1,7 @@
+https://www.w3schools.com/sql/
+
+
+
+
+Server=localhost;Database=master;Trusted_Connection=True;
+

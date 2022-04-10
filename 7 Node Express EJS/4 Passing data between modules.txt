@@ -1,0 +1,111 @@
+1.
+Passing data from one module to other
+
+a.
+in some js file lets say date.js,
+
+module.exports = "Hello World";
+
+
+In some other js file (our server js file),
+
+const date = require( __dirname + "/date.js");
+
+Then date will have "Hello World"
+
+
+
+
+b.
+in some js file lets say date.js,
+
+module.exports = {
+    firstName: 'James',
+    lastName: 'Bond'
+}
+
+
+In the server js file,
+
+const date = require( __dirname + "/date.js");
+
+console.log(person.firstName + ' ' + person.lastName);
+
+
+
+
+
+
+2.Having a function inside a module passing it:
+
+let the file name be date.js,
+
+module.exports = getDate;
+
+function getDate(){
+    let today = new Date();
+
+    let options = {
+        weekday: "long",
+        day : "numeric",
+        month : "long"
+    };
+
+    return today.toLocaleDateString("en-US",options);
+}
+
+
+
+In the server js file,
+
+const date = require( __dirname + "/date.js");
+
+var day = date();         
+
+
+
+
+
+
+
+3. Having many functions in a module and passsing it:
+
+let the file name be date.js,
+
+module.exports.getDate = getDate;
+
+function getDate(){
+    let today = new Date();
+
+    let options = {
+        weekday: "long",
+        day : "numeric",
+        month : "long"
+    };
+
+    return today.toLocaleDateString("en-US",options);
+}
+
+module.exports.getDay = getDay;
+function getDay(){
+    let today = new Date();
+
+    let options = {
+        weekday: "long"
+    };
+
+    return today.toLocaleDateString("en-US",options);
+}
+
+
+
+
+
+In the server js file,
+
+const date = require( __dirname + "/date.js");
+
+var day = date.getDate();
+
+var d = date.getDay();
+

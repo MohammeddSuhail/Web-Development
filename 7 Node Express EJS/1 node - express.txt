@@ -1,0 +1,414 @@
+1. 
+use cd to set directory
+then use mkdir to create a folder
+then cd to enter inside the folder
+
+2. touch server.js to create a js file
+
+3. npm init 
+   for using npm of node
+
+Now it will create JSON file which has dependencies and all
+
+
+
+
+https://expressjs.com/en/starter/installing.html
+
+
+For installing express,
+
+npm install express
+
+
+
+
+
+Getting started,
+
+https://expressjs.com/en/starter/hello-world.html
+
+
+
+
+
+
+
+
+
+
+
+const express = require('express');
+const app = express();
+const port = 3000;
+
+// "/" denotes home route , req-> erquest , res - > response
+app.get("/", (req, res) => {
+    res.send("Yo");
+});
+
+app.listen(port, function(){
+    console.log("Server started on Port 3000");
+});
+
+
+In command line,
+
+node server.js
+
+
+In command line it will show: Server started on Port 3000
+
+
+In browser when we search, 
+localhost:3000
+
+It will show 
+Yo
+
+
+
+
+
+
+
+
+
+
+
+const express = require('express');
+const app = express();
+const port = 3000;
+
+// "/" denotes root directory , req-> rquest , res - > response
+app.get("/", function(request, response) {
+    response.send("Yo");
+});
+
+app.get("/about", function(req,res){
+    res.send("<h1>Suhail</h1><h2>NMAMITIAN</h2>")
+});
+
+app.listen(port, function(){
+    console.log("Server started on Port 3000");
+});
+
+
+
+In browser when we search, 
+
+localhost:3000
+It will show, 
+Yo
+
+localhost:3000/about
+It will show, 
+Suhail               
+NMAMITIAN
+
+
+
+
+
+
+const express = require('express');
+const app = express();
+const port = 3000;
+
+// "/" denotes root directory , req-> rquest , res - > response
+app.get("/", function(request, response) {
+    response.send("Yo");
+});
+
+app.get("/about", function(req,res){
+   res.write("<h1>Yo</h1>"); 
+   res.write("<h1>Yo</h1>"); 
+   res.write("<h1>Yo</h1>"); 
+   res.send();
+});
+
+app.listen(port, function(){
+    console.log("Server started on Port 3000");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nodemon basically moniters our project auto restarts the server, so we need not restart the sever again and again if we change something
+
+
+I have installed nodemon using,
+npm install -g nodemon
+
+You need not install again and again
+
+
+
+For using it ,
+
+nodemon server.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+For displaying the html file as response,
+
+const express = require('express');
+const app = express();
+const port = 3000;
+
+app.get('/', function(req, res){
+    //__dirname gives us the path to current directory
+    res.sendFile(__dirname+"/index.html") ;
+});
+
+app.listen(port, function(){
+    console.log("running sever in port 3000")
+});
+
+
+
+
+
+
+
+
+
+
+
+.json()
+.text()
+
+.urlencoded
+used if u are getting data from html form
+
+
+
+
+
+
+For accsessing the data sent by html:
+
+
+
+html,
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <form action="/" method="post">
+        <input type="text" name="n1" placeholder="First number"/> <br> <br>
+        <input type="text" name="n2" placeholder="Second number"/> <br><br>
+        <button type="submit" name="submit" value="">calculate</button>
+    </form>
+</body>
+</html>
+
+
+
+
+
+js,
+
+const express = require('express');
+
+const app = express();
+app.use(express.urlencoded({ extended:true}));
+
+app.get('/', function(req, res){
+    //__dirname gives us the path to current directory
+    res.sendFile(__dirname+"/index.html") ;
+});
+
+app.post('/', function(req, res){
+    var num1 = Number(req.body.n1);  //it is read as text , so we convert it to Number
+    var num2 = Number(req.body.n2);
+
+    var result = num1 + num2;
+    res.send("Addition of "+num1+ " and "+num2+" is "+result);
+});
+
+app.listen(3000, function(){
+    console.log("running sever in port 3000")
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+index.html,
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <!--We are sending info to / so action="/" -->
+    <form action="/" method="post">
+        <input type="text" name="n1" placeholder="First number"/> <br> <br>
+        <input type="text" name="n2" placeholder="Second number"/> <br><br>
+        <button type="submit" name="submit" value="">calculate</button>
+    </form>
+</body>
+</html>
+
+
+
+bmiCalculator.html,
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <h1>BMI Calculator</h1>
+    <!--We are sending info to /bmi so action="/bmi" -->
+    <form action="/bmi" method="post">
+        <input type="text" name="height" placeholder="Enter Height"/> <br> <br>
+        <input type="text" name="width" placeholder="Enter Width"/> <br><br>
+        <button type="submit" name="submit" value="">calculate</button>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+js,
+
+
+const express = require('express');
+
+const app = express();
+app.use(express.urlencoded({ extended:true}));
+
+//displaying index.html for localhost:3000
+app.get('/', function(req, res){
+    //__dirname gives us the path to current directory
+    res.sendFile(__dirname+"/index.html") ;
+});
+
+//displaying bmiCalculator.html for localhost:3000/bmi
+app.get("/bmi",function(req, res){
+    res.sendFile(__dirname+"/bmiCalculator.html");
+});
+
+//for responding to /   ,form must have action='/' in html doc
+app.post('/', function(req, res){
+    var num1 = Number(req.body.n1);
+    var num2 = Number(req.body.n2);
+
+    var result = num1 + num2;
+    res.send("Addition of "+num1+ " and "+num2+" is "+result);
+});
+
+//for responding to /bmi   ,form must have action='/bmi' in html doc
+app.post("/bmi",function(req,res){
+    var h = Number(req.body.height);
+    var w = Number(req.body.width);
+
+    var result = h*w;
+    res.send("BMI is "+result);
+});
+
+
+app.listen(3000, function(){
+    console.log("running sever in port 3000")
+});
+
+
+
+
+
+
+
+
+
+localhost:3000
+
+
+localhost:3000/bmi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+while using node u can't directly link static stuffs like css file, client side js file and all.
+
+
+1.
+<link rel="stylesheet" href="css/styles.css">
+
+2.
+app.use(express.static("public"));
+
+all the static stuffs must be placed inside folder public
+
+

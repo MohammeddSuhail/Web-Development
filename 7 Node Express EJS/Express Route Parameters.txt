@@ -1,0 +1,3 @@
+app.get("/category/:<paramName>" , function(req,res){
+    //Access req.params.paramName
+});

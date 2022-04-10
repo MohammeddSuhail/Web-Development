@@ -1,0 +1,60 @@
+https://lodash.com/
+
+
+It has many methods,
+https://lodash.com/docs/4.17.15
+
+
+
+
+1.
+
+npm i lodash
+
+
+2.
+
+const _ = require('lodash');
+
+
+3.
+
+It has many methods
+
+
+One of them is lowercase,
+
+
+_.lowerCase('--Foo-Bar--');
+// => 'foo bar'
+ 
+_.lowerCase('fooBar');
+// => 'foo bar'
+ 
+_.lowerCase('__FOO_BAR__');
+// => 'foo bar
+
+
+
+
+
+eg:
+
+
+
+
+app.get('/posts/:title', function(req, res){
+
+  var recTitle = _.lowerCase(req.params.title);
+
+  posts.forEach(function(post){
+    const storedTitle = _.lowerCase(post.title);
+
+    if(recTitle === storedTitle){
+      console.log("Match Found");
+    }else{
+      console.log("Not found");
+    }
+  });
+  
+});

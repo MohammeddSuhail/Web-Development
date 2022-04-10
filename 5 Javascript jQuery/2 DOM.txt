@@ -1,0 +1,192 @@
+For attributes that can be manipulated: 
+https://www.w3schools.com/jsref/dom_obj_style.asp
+
+
+1.
+document.getElementByTagName("li");
+it returns a list of li , even if there is only one li
+
+document.getElementByTagName("li")[2].style.color="purple";
+                                 2nd li element
+
+
+
+
+
+document.getElementsByTagName("li").length;
+gives the length of the array returned by document.getElementByTagName("li")
+
+
+
+
+
+
+
+
+
+2.
+
+document.getElementsByClassName("btn");
+returns a list of elements having class name as btn, even if there's only one ele having class btn
+
+
+document.getElementsByClassName("btn")[0].style.color="red";
+
+
+
+
+
+
+
+
+
+
+
+3.
+document.getElementById("something").innerHTML="Good Bye";
+directly accessing the element using it's id
+
+
+
+
+
+
+
+
+
+4.
+
+document.querySelector("h1");
+
+document.querySelector("#title");
+
+document.querySelector(".btn");
+
+These selects the first element with the specified tag_name / id / class_name
+
+
+
+
+
+
+document.querySelector("li a");
+selects anchor tag(<a href ...> </a>) inside li tag
+
+
+  
+
+
+document.querySelector("li.item");
+no space between li and .item because they are in same line
+
+
+
+
+
+document.querySelector("#list a");
+selects first anchor tag inside the ele with id list
+
+
+
+
+document.querySelector("#list .item");
+selects first ele with class item inside the ele with id list
+
+
+
+
+
+
+
+
+5.
+
+document.querySelectorAll("#list .item");
+gives us list of ele with class item inside the ele with id list
+
+document.querySelectorAll("#list .item")[3].style.color="blue";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+If we wanna change a set of attribute dynamically then we can add and remove class to that element
+
+
+adding class,
+document.querySelector("button").classList.add("new_class_name");
+new_class_name-> contains the new styles that u wanna add
+
+
+removing class,
+document.querySelector("button").classList.remove("lass_name");
+class_name-> is the class u wanna remove
+
+
+
+toggling class,
+
+document.querySelector("button").classList.toggle("class_name");
+if class_name not there then it will add the class,
+if not it will remove it
+
+
+
+
+
+
+
+
+
+
+
+innerHTML:
+document.getElementById("h1").innerHTML;
+gives whatever's between h1(identifier specified)
+
+document.getElementById("h1").innerHTML="<em>Good Bye</em>"
+
+
+
+
+textContent:
+document.getElementById("h1").textContent;
+gives just the text
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.querySelector("a").attributes;
+gives a list of attributes
+
+
+
+document.querySelector("a").getAttribute("href");
+
+document.querySelector("a").setAttribute("href","what_value-should_be");
+
+

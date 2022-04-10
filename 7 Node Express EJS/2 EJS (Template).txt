@@ -1,0 +1,414 @@
+Embedded JavaScript templating
+
+https://ejs.co/
+
+https://github.com/mde/ejs/wiki/Using-EJS-with-Express
+
+
+Or search ejs using express in google
+
+
+It's a template
+
+
+
+
+1.
+
+npm install ejs
+
+
+
+
+2.
+
+
+
+const express = require('express');
+const app = express();
+
+app.set('view engine', 'ejs');
+
+app.get("/", (req, res) => {
+    res.render("list",{dataPassed : "done"});
+});
+
+app.listen(3000, function(){
+    console.log("Server started on Port 3000");
+});
+
+
+
+list is the template
+The template must be placed inside views folder
+i.e,
+list.ejs must be inside views folder
+
+
+
+
+list.ejs,
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%= dataPassed %></h1>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<%= name  %>
+For replacing name's actual value in that place
+
+<%    %>
+
+for for control-flow (like if else and all) only
+Put the javascript inside it
+
+
+
+
+
+
+
+
+list.ejs,
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1><%= todayDay %></h1>
+
+    <ol>
+
+    <% for(var i=0;i<items.length;i++){ %>
+        <li> <%= items[i] %></li>
+    <% } %>
+    
+    </ol>
+
+    <form method="post" action="/">
+        <input type="text" name="newItem"/><br>
+        <button type="submit" >Add</button>
+    </form>
+    
+</body>
+</html>
+
+
+
+js file,
+
+const express = require('express');
+const app = express();
+
+app.set('view engine', 'ejs');
+app.use(express.urlencoded({ extended:true}));
+app.use(express.static("public"));
+
+let items = ["pokemon","Dragon"];
+
+
+
+app.get("/", function (req, res){
+
+    let today = new Date();
+
+    let options = {
+        weekday: "long",
+        day : "numeric",
+        month : "long"
+    };
+
+    let day = today.toLocaleDateString("en-US",options);
+    
+
+    res.render("list",{todayDay : day, items : items});
+});
+
+app.post("/",function(req,res){
+    let item = req.body.newItem;
+    items.push(item);
+    res.redirect("/");
+});
+
+app.listen(3000, function(){
+    console.log("Server started on Port 3000");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+If we want the same header and footer for many ejs files then,
+
+put the header part in header.ejs
+and footer part in footer.ejs
+Both header.ejs and footer.ejs must be inside views folder
+
+
+Then in the ejs file u wanna use it,
+
+<%- include('header'); -%>
+<h1>
+  Title
+</h1>
+<p>
+  My page
+</p>
+<%- include('footer'); -%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+list.ejs,
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="box">
+        <% for(var i=0;i<items.length;i++){ %>
+            <div class="item">
+                <input type="checkbox">
+                <p> <%= items[i] %> </p>
+            </div>
+        <% } %> 
+
+        <form method="post" action="/">
+            <input type="text" name="newItem" placeholder="New Item"/>
+            <button type="submit" name="buttonName" value= <%=pageTitle%> >+</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+js file,
+
+const express = require('express');
+const app = express();
+
+app.set('view engine', 'ejs');
+app.use(express.urlencoded({ extended:true}));
+app.use(express.static("public"));
+
+let items = [];
+let workItems=[];
+
+app.get("/", function (req, res){
+
+    let today = new Date();
+
+    let options = {
+        weekday: "long",
+        day : "numeric",
+        month : "long"
+    };
+
+    let day = today.toLocaleDateString("en-US",options);
+    
+
+    res.render("list",{pageTitle : day, items : items});
+});
+
+app.get("/work",function(req,res){
+    res.render("list", {pageTitle : "Work", items : workItems});
+});
+
+app.post("/",function(req,res){
+    let item = req.body.newItem;
+
+    //we had set the button value as pageTitle dynamically, so that based on the pageTitle we add the items to proper list 
+    //and render the proper page
+    if(req.body.buttonName === "Work"){
+        workItems.push(item);
+        res.redirect("/work");
+    }else{
+        items.push(item);
+        res.redirect("/");
+    }
+});
+
+
+app.listen(3000, function(){
+    console.log("Server started on Port 3000");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+By using this we can create many html pages by using a single ejs file,
+
+
+
+app.get('/posts/:title', function(req, res){
+
+  console.log("req.params.title");
+});
+
+If we search localhost:3000/posts/suhail,
+
+Then title will have value suhail
+
+By using this we can create many html pages by using a single ejs file
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+app.get('/posts/:title', function(req, res){
+
+  var recTitle = _.lowerCase(req.params.title);
+
+  posts.forEach(function(post){
+    const storedTitle = _.lowerCase(post.title);
+
+    if(recTitle === storedTitle){
+      const title = post.title;
+      const postBody = post.postBody;
+
+      res.render("post",{title: title, postBody: postBody});
+    }else{
+      console.log("Not found");
+    }
+  });
+});
+
+
+Here based on the title which is passed as parameter while searching we render the post.ejs
+
+
+
+Here since we have used _.lowerCase(req.params.title)
+
+If we wanna go to a page havng title Another Post
+
+we acn search 
+localhost:3000/posts/another-post
+or
+localhost:3000/posts/Another-Post
+or
+localhost:3000/posts/Another-post
+etc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%- include('partials/header'); -%>
+
+    <h1>Home</h1>
+    <p><%= homeStartingContent %></p>
+
+    <% posts.forEach(function(post){  %>
+        <h1> <%= post.title %> </h1>
+        <%if(post.postBody.length > 100){ %>
+            <p style="display: inline;"> <%= post.postBody.slice(0,100)+" ..." %> </p>
+        <%}else{ %>
+                <p> <%= post.postBody %> </p>
+        <% } %>
+        
+        <a href= "/posts/<%=post.title%>">read more</a>
+    <% }); %>
+    
+
+<%- include('partials/footer'); -%>
